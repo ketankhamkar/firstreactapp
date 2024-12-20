@@ -1,6 +1,6 @@
 {
   "name": "firstapp",
-  "homepage": "https://ketankhamkar.github.io/firstreactapp/",
+  "homepage": "/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
