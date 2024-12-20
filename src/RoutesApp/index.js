@@ -1,4 +1,4 @@
-import { Route, Routes, BrowserRouter, Link } from "react-router-dom";
+import { Route, Routes, HashRouter, Link } from "react-router-dom";
 import React, { lazy, Suspense } from "react";
 const Services = lazy(() => import("../screens/Services"));
 const Contacts = lazy(() => import("../screens/Contacts"));
@@ -8,7 +8,7 @@ const Login = lazy(() => import("../screens/Login"));
 
 const RoutesApp = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Suspense
         fallback={
           <div
@@ -31,7 +31,7 @@ const RoutesApp = () => {
           <Route path="/Login" Component={Login} />
         </Routes>
       </Suspense>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 export default RoutesApp;

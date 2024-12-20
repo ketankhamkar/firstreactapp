@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
 
 const Navbar = () => {
