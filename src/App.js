@@ -47,7 +47,8 @@ function App() {
           style={{
             display: "flex",
             flexDirection: "row",
-            overflowX: "auto", // Enable horizontal scrolling when necessary
+            flexWrap: "wrap",
+            overflowX: "auto",
             whiteSpace: "nowrap",
           }}
         >
