@@ -47,9 +47,8 @@ function App() {
           style={{
             display: "flex",
             flexDirection: "row",
-            alignItems: "center",
-            flexWrap: "wrap",
-            justifyContent: "center",
+            overflowX: "auto", // Enable horizontal scrolling when necessary
+            whiteSpace: "nowrap",
           }}
         >
           {myData.map((item) => (
@@ -57,13 +56,11 @@ function App() {
               style={{
                 display: "flex",
                 flexDirection: "column",
-                flexWrap: "wrap",
                 alignItems: "center",
                 margin: 10,
                 borderWidth: 1,
                 borderColor: "#999",
                 padding: 5,
-                width: "100%",
                 borderRadius: 10,
                 cursor: "pointer",
                 boxShadow: "0 4px 8px rgba(0, 0, 0, 0.4)", // Adding shadow
