@@ -18,7 +18,7 @@ function App() {
   const myData = useSelector((state) => state.myData);
   console.log("myData==", myData);
   return (
-    <div className="mb-5 flex flex-col">
+    <div className="mb-5 flex flex-col flex-1 flex-wrap">
       <Navbar />
       <div style={{ position: "relative", width: "100%", height: "auto" }}>
         <img
@@ -55,6 +55,7 @@ function App() {
               style={{
                 display: "flex",
                 flexDirection: "column",
+                flexWrap: "wrap",
                 alignItems: "center",
                 margin: 10,
                 borderWidth: 1,
@@ -74,9 +75,9 @@ function App() {
                 width="100"
                 height="100"
                 style={{
-                  width: "100%",
+                  width: "100",
                   height: "auto",
-                  maxWidth: "100%",
+                  maxWidth: "100",
                   borderRadius: 10,
                   aspectRatio: "1 / 1",
                   objectFit: "cover",
