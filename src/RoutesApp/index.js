@@ -1,10 +1,11 @@
-import { Route, Routes, BrowserRouter, Link } from "react-router-dom";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import React, { lazy, Suspense } from "react";
 const Services = lazy(() => import("../screens/Services"));
 const Contacts = lazy(() => import("../screens/Contacts"));
 const UserProfile = lazy(() => import("../screens/UserProfile"));
 const App = lazy(() => import("../App"));
 const Login = lazy(() => import("../screens/Login"));
+const About = lazy(() => import("../screens/About"));
 
 const RoutesApp = () => {
   return (
@@ -29,6 +30,7 @@ const RoutesApp = () => {
           <Route path="/Contacts" Component={Contacts} />
           <Route path="/Contacts/:id" Component={UserProfile} />
           <Route path="/Login" Component={Login} />
+          <Route path="/About" Component={About} />
         </Routes>
       </Suspense>
     </BrowserRouter>
