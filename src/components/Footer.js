@@ -3,12 +3,12 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <img
+      {/* <img
         src="/blackoutline.jpg"
         alt={"fream"}
         height={"auto"}
         width={"100%"}
-      />
+      /> */}
       <div className=" bg-[#1f1b1a] flex flex-1 flex-col sm:flex-row ">
         <div
           style={{

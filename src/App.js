@@ -2,6 +2,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement, addItem } from "./redux/slices/counterSlice";
+import Footer from "./components/Footer";
 
 const data = [
   { id: 1, name: "ketan khamkar", city: "jsp" },
@@ -191,6 +192,92 @@ function App() {
           ))}
         </div>
       </div>
+      <div
+        style={{
+          position: "relative", // to position the overlay inside the div
+          width: "100%",
+          height: "400px", // Adjust the height based on your design needs
+          backgroundImage: `url("/bargers/backImage.jpg")`,
+          backgroundSize: "cover", // Makes sure the image covers the entire div
+          backgroundPosition: "center", // Center the image
+          backgroundRepeat: "no-repeat", // Prevent image repeat
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            top: "40px",
+            left: "40px",
+            right: "40px",
+            bottom: "40px",
+            zIndex: 1,
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
+            textAlign: "center",
+            padding: 10,
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <p style={{ color: "#fff", textDecoration: "underline", margin: 10 }}>
+            EVERY THURSDAY IN JUNE
+          </p>
+          <h3 style={{ color: "#fff", fontSize: 25, margin: 10 }}>
+            Thirsty Thursday
+          </h3>
+          <h3 style={{ color: "#fda51b", fontSize: 18, margin: 10 }}>
+            Cheers to the weekend! Enjoy 2-for-1 cocktails all day long!
+          </h3>
+          <button
+            style={{
+              backgroundColor: "#fda51b",
+              padding: 10,
+              borderRadius: 10,
+              color: "#000",
+              width: 200,
+              margin: 10,
+            }}
+          >
+            Cocktails
+          </button>
+        </div>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          flex: 1,
+          flexDirection: "column",
+          alignItems: "center",
+          textAlign: "center",
+          backgroundColor: "#ba2f32",
+          padding: 20,
+        }}
+      >
+        <img
+          src="/bargers/sun.gif"
+          height={100}
+          width={100}
+          style={{ padding: 20 }}
+        />
+        <p style={{ color: "#fff" }}>
+          We hope you'll come in soon and enjoy with us our delicious food and a
+          drink or two. Don't forget to spread the word and bring your friends!
+          Cheers to a fun and delicious summer.
+        </p>
+        <img src="/bargers/mingle.jpg" width={"100%"} height={"auto"} />
+        <button
+          style={{
+            backgroundColor: "#fda51b",
+            padding: 10,
+            borderRadius: 10,
+            color: "#000",
+            width: "100%",
+            margin: 10,
+          }}
+        >
+          Make a Reservations
+        </button>
+      </div>
+      <Footer />
     </div>
   );
 }
