@@ -12,110 +12,185 @@ const data = [
   { id: 6, name: "shubham khamkar", city: "vom" },
 ];
 
+const data1 = [
+  {
+    id: "123",
+    image: "/bargers/food1.png",
+    title: "Southern Stack",
+    text: "A hearty vegetable patty bursting with farm-fresh flavors.",
+    prize: "40",
+  },
+  {
+    id: "234",
+    image: "/bargers/food2.png",
+    title: "Hervest Burger",
+    text: "Get one hearty smoked killer and one deadly cheese hotdog with the sauces of your choice.",
+    prize: "55",
+  },
+  {
+    id: "345",
+    image: "/bargers/food3.png",
+    title: "Twin Peak",
+    text: "Get one hearty smoked killer hotdog with sauces of your choice.",
+    prize: "72",
+  },
+];
+
 function App() {
   const dispatch = useDispatch();
   const counter = useSelector((state) => state.counter);
   const myData = useSelector((state) => state.myData);
   console.log("myData==", myData);
   return (
-    <div className="mb-5 flex flex-col flex-1 flex-wrap">
+    <div>
       <Navbar />
-      <div style={{ position: "relative", width: "100%", height: "auto" }}>
-        <img
-          src="architect.jpg"
-          alt="author"
-          style={{ width: "100%", height: "auto" }}
-        />
-        {/* Text Container */}
-        <div
+      <div
+        style={{
+          display: "flex",
+          flex: 1,
+          alignItems: "center",
+          justifyContent: "center",
+          padding: 20,
+          backgroundColor: "#000",
+        }}
+      >
+        <img src="/bargers/logo.png" height={100} width={100} />
+      </div>
+      <img src="/bargers/burger.gif" width={"100%"} height={"auto"} />
+      <div
+        style={{ backgroundColor: "#ba2f32", padding: 10, textAlign: "center" }}
+      >
+        <h3 style={{ color: "#fda51b", fontSize: 28, margin: 10 }}>
+          Get fired up for summer with our sizzling burger creations!
+        </h3>
+        <h3 style={{ color: "#fff", margin: 10 }}>
+          At Burger Builders, we are excited to offer our sizzling summer
+          specials that will tantalize your taste buds.
+        </h3>
+        <button
           style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            color: "black",
-            fontSize: "24px",
-            fontWeight: "bold",
+            backgroundColor: "#fda51b",
+            padding: 10,
+            borderRadius: 30,
+            color: "#000",
+            width: 200,
+            margin: 10,
           }}
         >
-          <p>Buildings.com</p>
-        </div>
+          Order Now
+        </button>
       </div>
-      <div>
-        <h2>List of items</h2>
+      <div
+        style={{ backgroundColor: "#ffebca", padding: 20, textAlign: "center" }}
+      >
+        <h3 style={{ color: "#ba2f32", fontSize: 24 }}>BURGER SPECIALS</h3>
+        <p style={{ color: "#000" }}>
+          Summertime is burger time - don't miss out on our daily specials
+          featuring fresh, flavorful creations that are sure to satisfy your
+          cravings.
+        </p>
         <div
+          className="flex-col sm:flex-row md:flex-row"
           style={{
             display: "flex",
-            flexDirection: "row",
-            flexWrap: "wrap",
-            overflowX: "auto",
-            whiteSpace: "nowrap",
+            flex: 1,
+            padding: 10,
+            overflow: "hidden",
           }}
         >
-          {myData.map((item) => (
+          {data1.map((item) => (
             <div
+              key={item.id}
               style={{
                 display: "flex",
-                flexDirection: "column",
+                flex: 1,
                 alignItems: "center",
-                margin: 10,
-                borderWidth: 1,
-                borderColor: "#999",
-                padding: 5,
-                borderRadius: 10,
-                cursor: "pointer",
-                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.4)", // Adding shadow
+                justifyContent: "center",
+                flexDirection: "column",
+                padding: 10,
               }}
-              onClick={() => alert(`hi name=${item.name}`)}
-              key={() => item.id}
             >
-              {/* <a href="https://example.com"> */}
               <img
-                src="/architect.jpg"
-                alt="the authors"
-                width="100"
-                height="100"
-                style={{
-                  width: "100",
-                  height: "auto",
-                  maxWidth: "100",
-                  borderRadius: 10,
-                  aspectRatio: "1 / 1",
-                  objectFit: "cover",
-                }}
+                src={item.image}
+                height={120}
+                width={120}
+                style={{ padding: 10 }}
               />
-              <p>{item.name}</p>
-              <p>{item.city}</p>
-              {/* </a> */}
+              <h3 style={{ fontSize: 22 }}>{item.title}</h3>
+              <h3>{item.text}</h3>
+              <h2
+                style={{ color: "#ba2f32", fontSize: 22 }}
+              >{`$ ${item.prize}`}</h2>
+              <button
+                style={{
+                  backgroundColor: "#fda51b",
+                  padding: 10,
+                  borderRadius: 10,
+                  color: "#000",
+                  width: 200,
+                  margin: 10,
+                }}
+              >
+                Order Now
+              </button>
+            </div>
+          ))}
+        </div>
+        <img src={"/bargers/outline123.jpg"} height={20} width={"100%"} />
+        <h3 style={{ color: "#ba2f32", fontSize: 24 }}>SANDWICH SPECIALS</h3>
+        <p style={{ color: "#000" }}>
+          Summer just got better with our daily special sandwiches - bite into
+          deliciousness with fresh, handcrafted creations that'll take your
+          taste buds on a journey they won't forget.
+        </p>
+        <div
+          className="flex-col sm:flex-row md:flex-row"
+          style={{
+            display: "flex",
+            flex: 1,
+            padding: 10,
+            overflow: "hidden",
+          }}
+        >
+          {data1.map((item) => (
+            <div
+              key={item.id}
+              style={{
+                display: "flex",
+                flex: 1,
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "column",
+                padding: 10,
+              }}
+            >
+              <img
+                src={item.image}
+                height={120}
+                width={120}
+                style={{ padding: 10 }}
+              />
+              <h3 style={{ fontSize: 22 }}>{item.title}</h3>
+              <h3>{item.text}</h3>
+              <h2
+                style={{ color: "#ba2f32", fontSize: 22 }}
+              >{`$ ${item.prize}`}</h2>
+              <button
+                style={{
+                  backgroundColor: "#fda51b",
+                  padding: 10,
+                  borderRadius: 10,
+                  color: "#000",
+                  width: 200,
+                  margin: 10,
+                }}
+              >
+                Order Now
+              </button>
             </div>
           ))}
         </div>
       </div>
-      <button
-        style={{ backgroundColor: "blue", color: "white" }}
-        onClick={() => dispatch(increment())}
-        className="button"
-      >
-        increament
-      </button>
-      <p style={{ alignItems: "center", justifyContent: "center" }}>
-        {counter}
-      </p>
-      <button
-        style={{ backgroundColor: "blue", color: "white" }}
-        onClick={() => dispatch(decrement())}
-        className="button"
-      >
-        decrement
-      </button>
-      <button
-        style={{ backgroundColor: "blue", color: "white" }}
-        onClick={() => dispatch(addItem(data))}
-        className="button"
-      >
-        push Data
-      </button>
-      <h1>ketan</h1>
     </div>
   );
 }
