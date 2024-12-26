@@ -36,3 +36,61 @@
     transform: rotate(360deg);
   }
 }
+
+.logo-container {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  padding: 20px;
+}
+
+.txtContainer {
+  background-color: #ba2f32;
+  padding: 20px;
+  text-align: center;
+}
+.h3Style {
+  font-size: 28px;
+  margin: 10px;
+  color: #fda51b;
+}
+
+.normalText {
+  margin: 10px;
+  color: #ffffff;
+}
+
+.overlay {
+  position: relative; /* To position the overlay inside the div */
+  width: 100%;
+  height: 400px; /* Adjust the height based on your design needs */
+  background-image: url("/public/bargers/backImage.jpg");
+  background-size: cover; /* Ensures the image covers the entire div */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.insideView {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  left: 20px;
+  bottom: 20px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.button {
+  background-color: #fda51b;
+  padding: 10px;
+  border-radius: 10px;
+  color: #000;
+  width: 200px;
+  margin: 10px;
+}

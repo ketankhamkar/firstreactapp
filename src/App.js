@@ -3,15 +3,7 @@ import Navbar from "./components/Navbar";
 import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement, addItem } from "./redux/slices/counterSlice";
 import Footer from "./components/Footer";
-
-const data = [
-  { id: 1, name: "ketan khamkar", city: "jsp" },
-  { id: 2, name: "amit khamkar", city: "lks" },
-  { id: 3, name: "ratan khamkar", city: "kol" },
-  { id: 4, name: "karan khamkar", city: "nom" },
-  { id: 5, name: "sumit khamkar", city: "ato" },
-  { id: 6, name: "shubham khamkar", city: "vom" },
-];
+import colors from "./constants/colors";
 
 const data1 = [
   {
@@ -45,26 +37,15 @@ function App() {
   return (
     <div>
       <Navbar />
-      <div
-        style={{
-          display: "flex",
-          flex: 1,
-          alignItems: "center",
-          justifyContent: "center",
-          padding: 20,
-          backgroundColor: "#000",
-        }}
-      >
+      <div className="logo-container">
         <img src="/bargers/logo.png" height={100} width={100} />
       </div>
       <img src="/bargers/burger.gif" width={"100%"} height={"auto"} />
-      <div
-        style={{ backgroundColor: "#ba2f32", padding: 10, textAlign: "center" }}
-      >
-        <h3 style={{ color: "#fda51b", fontSize: 28, margin: 10 }}>
+      <div className="txtContainer">
+        <h3 className="h3Style">
           Get fired up for summer with our sizzling burger creations!
         </h3>
-        <h3 style={{ color: "#fff", margin: 10 }}>
+        <h3 className="normalText">
           At Burger Builders, we are excited to offer our sizzling summer
           specials that will tantalize your taste buds.
         </h3>
@@ -176,48 +157,13 @@ function App() {
               <h2
                 style={{ color: "#ba2f32", fontSize: 22 }}
               >{`$ ${item.prize}`}</h2>
-              <button
-                style={{
-                  backgroundColor: "#fda51b",
-                  padding: 10,
-                  borderRadius: 10,
-                  color: "#000",
-                  width: 200,
-                  margin: 10,
-                }}
-              >
-                Order Now
-              </button>
+              <button className="button">Order Now</button>
             </div>
           ))}
         </div>
       </div>
-      <div
-        style={{
-          position: "relative", // to position the overlay inside the div
-          width: "100%",
-          height: "400px", // Adjust the height based on your design needs
-          backgroundImage: `url("/bargers/backImage.jpg")`,
-          backgroundSize: "cover", // Makes sure the image covers the entire div
-          backgroundPosition: "center", // Center the image
-          backgroundRepeat: "no-repeat", // Prevent image repeat
-        }}
-      >
-        <div
-          style={{
-            position: "absolute",
-            top: "40px",
-            left: "40px",
-            right: "40px",
-            bottom: "40px",
-            zIndex: 1,
-            backgroundColor: "rgba(0, 0, 0, 0.5)",
-            textAlign: "center",
-            padding: 10,
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
+      <div className="overlay">
+        <div className="insideView">
           <p style={{ color: "#fff", textDecoration: "underline", margin: 10 }}>
             EVERY THURSDAY IN JUNE
           </p>
